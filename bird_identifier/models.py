@@ -17,12 +17,11 @@ class Bird(models.Model):
     common_name = models.CharField(max_length=100)
     scientific_name = models.CharField(max_length=100)
     wingspan = models.CharField(max_length=100)
-    mass = models.IntegerField(default=0)
-    lifespan = models.IntegerField(default=0)
+    mass = models.CharField(max_length=100)
+    lifespan = models.CharField(max_length=100)
     conservation_status = models.CharField(max_length=100, choices=CONSERVATION_CHOICES, default='Not evaluated')
-    speed = models.IntegerField(default=0)
     image = models.ImageField()
-    fact = models.CharField(max_length=100)
+    fact = models.CharField(max_length=300)
 
 class ModelWithFileField(models.Model):
     user_photo = models.ImageField(upload_to='results/')

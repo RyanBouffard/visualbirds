@@ -3,18 +3,42 @@
 {% block content %}
 
 <img src="{{ bird.image.url }}"/>
+<br />
+<br />
+<br />
 
+<table>
 <tbody>
     <tr>
+		<td>Common Name:  </td>
         <td>{{ bird.common_name }}</td>
+	</tr>
+    <tr>	
+		<td>Scientific Name: </td>
         <td>{{ bird.scientific_name }}</td>
+	</tr>
+    <tr>
+		<td>Wingspan: </td>
         <td>{{ bird.wingspan }}</td>
+	</tr>
+    <tr>
+		<td>Mass: </td>
         <td>{{ bird.mass }}</td>
+	</tr>
+    <tr>
+		<td>Lifespan: </td>
         <td>{{ bird.lifespan }}</td>
+	</tr>
+    <tr>
+		<td>Conservation Status: </td>
         <td>{{ bird.conservation_status }}</td>
-        <td>{{ bird.speed }}</td>
+	</tr>
+    <tr>
+		<td>Fun Fact: </td>
         <td>{{ bird.fact }}</td>
-    </tr>
+	</tr>
+
 </tbody>
+</table>
 
 {% endblock %}
