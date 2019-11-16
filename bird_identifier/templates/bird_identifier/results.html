@@ -2,43 +2,23 @@
 
 {% block content %}
 
-<img src="{{ bird.image.url }}"/>
-<br />
-<br />
+<div class="text-center">
+
+  <h2>{{ bird.common_name }}</h2>
+
+  <img src="{{ bird.image.url }}" class="rounded border border-primary"/>
+</div>
+
 <br />
 
-<table>
-<tbody>
-    <tr>
-		<td>Common Name:  </td>
-        <td>{{ bird.common_name }}</td>
-	</tr>
-    <tr>	
-		<td>Scientific Name: </td>
-        <td>{{ bird.scientific_name }}</td>
-	</tr>
-    <tr>
-		<td>Wingspan: </td>
-        <td>{{ bird.wingspan }}</td>
-	</tr>
-    <tr>
-		<td>Mass: </td>
-        <td>{{ bird.mass }}</td>
-	</tr>
-    <tr>
-		<td>Lifespan: </td>
-        <td>{{ bird.lifespan }}</td>
-	</tr>
-    <tr>
-		<td>Conservation Status: </td>
-        <td>{{ bird.conservation_status }}</td>
-	</tr>
-    <tr>
-		<td>Fun Fact: </td>
-        <td>{{ bird.fact }}</td>
-	</tr>
+<div class="border border-primary">
+  <p><b>Scientific Name:</b> {{ bird.scientific_name }}</p>
+  <p><b>Wingspan</b> {{ bird.wingspan }}</p>
+  <p><b>Mass</b> {{ bird.mass }}</p>
+  <p><b>Lifespan</b> {{ bird.lifespan }}</p>
+  <p><b>Conservation Status:</b> {{ bird.conservation_status }}</p>
+  <p><b>Fact:</b> {{ bird.fact }}</p>
+</div>
 
-</tbody>
-</table>
 
 {% endblock %}
