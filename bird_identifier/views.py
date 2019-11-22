@@ -90,8 +90,10 @@ def upload(request):
             confidence_ratings = separateConfidenceLevelsIntoWorkable(confidence_levels)
             highest_score = determineHighestConfidenceRating(confidence_ratings)
 
-
-            return results(request, highest_score)
+            if highest_score[1] >= 0.9:
+                return results(request, highest_score)
+            else:
+                return render(request, 'bird_identifier/failure.html')
 
     else:
         form = UploadFileForm()
